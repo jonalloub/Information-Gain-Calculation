@@ -18,11 +18,8 @@ InformationGain <-function(reps = NULL, pk = NULL, nk = NULL, P = NULL, N = NULL
   
   # Remainder Operation
   while (counter <= reps)
-  {
-    pka = pk[counter]
-    nka = nk[counter]
-    
-    data = (((pka + nk[counter]) / (P + N)) * B(pka , nka))
+  { 
+    data = (((pk[counter] + nk[counter]) / (P + N)) * B(pk[counter] , nk[counter]))
     
     result = result + data
     
